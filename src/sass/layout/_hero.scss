@@ -1,0 +1,12 @@
+.hero__title {
+  @media screen and (min-width: 1200px) {
+    display: block;
+    max-width: 700px;
+  }
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-left: auto;
+  margin-right: auto;
+}
