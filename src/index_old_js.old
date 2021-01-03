@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modul 1</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- ======= according to 10-input-experim.js -->
+    <!-- <label>
+      Number
+      <input type="number" name="number">
+    </label>
+    <label>
+      Power
+      <input type="number" name="power">
+    </label>
+    <button>Do the power</button> -->
+    <!-- ======= END according to 10-input-experim.js -->
+
+    <!-- +++++++++ push.js +++ MODUL 2 - Example 1 (Repeta Vebinar 1, min: 43:30) +++++++++-->
+    <label for="">
+      <input type="number" class="form-control js-value" />
+    </label>
+    <button type="button" class="btn btn-primary js-add-value">
+      Add array
+    </button>
+    <button type="button" class="btn btn-success js-calculate">
+      Sum calculate</button
+    ><button type="button" class="btn btn-success js-calculate">
+      Sum calculate
+    </button>
+    <!-- +++++++++ END MODUL 2 - Example 1 (Repeta Vebinar 1, min: 51:30) +++++++++-->
+
+    <!-- <script src="./js/script.js"></script> -->
+
+    <!-- if we use many scripts, 
+      but need to use the same variables 
+      name, we should assign type="module",
+      brousers do this function ourself, but
+      we should remember it -->
+    <!-- additional tasks GoIT -->
+    <!-- <script src="./js/additional/modul-1.js" type="module"></script> -->
+    <script src="./js/modul-2/08-pseudoArray.js" type="module"></script>
+    <!-- --------------------- -->
+    <!-- <script src="./js/modul-1/00-js-book-test.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/00-my-test.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/01-vars.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/02-input.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/02-a-vars-math-symb.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/03-numbers.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/04-strings.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/05-logic-operators.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/06-branching.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/07-switch.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/08-loops.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/09-loops-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/10-input-experim.js" type="module"></script> -->
+    <!-- ================== Practice 1 - Nov. 28, 2020 ============-->
+    <!-- <script src="./js/modul-1/practice-00.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/practice-01.js" type="module"></script> -->
+    <!-- ----------------------- Home work 1 ----------------------------->
+    <!-- <script src="./js/modul-1/task-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-3.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-4.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-5.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-6.js" type="module"></script> -->
+    <!-- <script src="./js/modul-1/task-6-a.js" type="module"></script> -->
+    <!-- ========================================================================= -->
+    <!-- =======Modul 2============ Modul 2 ===========Modul 2========Modul 2===== -->
+    <!-- ========================================================================= -->
+    <!-- <script src="./js/modul-2/00-learning-test.js" type="module"></script> -->
+    <!-- ----------------------Vebinar 1---------------------- -->
+    <!-- <script src="./js/modul-2/01-push.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/02-split-join.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/03-splice.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/04-includes.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/05-concat.js" type="module"></script> -->
+    <!-- ----------------------Vebinar 2---------------------- -->
+    <!-- <script src="./js/modul-2/06-slugs_array.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/07-search.js" type="module"></script> -->
+    <!-- ----------------------modul2-webinar4_veniamin---------------------- -->
+    <!-- <script src="./js/modul-2/modul2-webinar4_veniamin/task6.js" type="module"></script> -->
+    <!-- ----------------------END --- modul2-webinar4_veniamin---------------------- -->
+    <!-- ================== Home work 2 =============================-->
+    <!-- <script src="./js/modul-2/task-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-3.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-4.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-4-copy.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-5.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-6.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-6bbb.js" type="module"></script> -->
+    <!-- <script src="./js/modul-2/task-6ccc.js" type="module"></script> -->
+    <!-- ========================================================================= -->
+    <!-- =======Modul 3====OBJECTS-OBJECTS-OBJECTS=====Modul 3========Modul 3===== -->
+    <!-- ========================================================================= -->
+    <!-- <script src="./js/modul-3/go-it-book.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3/modul-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3/modul-1-a.js" type="module"></script> -->
+    <!-- ---------------------Practice Dec 12 2020--------------------------------- -->
+    <!-- <script src="./js/modul-3/practice-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3/practice-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3/practice-3.js" type="module"></script> -->
+    <!-- ---------------------Home works------------------------------------------- -->
+    <!-- <script src="./js/modul-3//hw_done/task-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3//hw_done/task-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3//hw_done/task-3.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3//hw_done/task-4.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3//hw_done/task-5.js" type="module"></script> -->
+    <!-- <script src="./js/modul-3//hw_done/task-6.js" type="module"></script> -->
+    <!-- ========================================================================== -->
+    <!-- =======Modul 4====HIGHER-CALLBACK-FUNCTION=====Modul 4========Modul 4===== -->
+    <!-- ========================================================================== -->
+    <!-- <script src="./js/modul-4/js-book.js" type="module"></script> -->
+    <!-- <script src="./js/modul-4/js-book-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-4/js-book-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-4/js-book-4_this.js" type="module"></script> -->
+    <!-- <script src="./js/modul-4/task-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-4/task-2.js" type="module"></script> -->
+    <!-- ========================================================================== -->
+    <!-- =======Modul 5====CLASS========================Modul 5========Modul 4===== -->
+    <!-- ========================================================================== -->
+    <!-- <script src="./js/modul-5/00-theory.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/00-theory-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/00-prototype.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/00-prototype-3.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/00.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/00-repeta-lesson.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-1.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-1-a.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-2.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-3.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-4.js" type="module"></script> -->
+    <!-- <script src="./js/modul-5/task-5.js" type="module"></script> -->
+  </body>
+</html>
