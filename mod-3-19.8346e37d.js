@@ -117,85 +117,60 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/additional/mod-2/mod-2-28-percentage.js":[function(require,module,exports) {
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+})({"js/additional/mod-3/mod-3-19.js":[function(require,module,exports) {
+// task 19 - Задача. Коллекция значений свойства
+// Напиши функцию getAllPropValues(propName) которая принимает один
+// параметр propName - имя (ключ) свойства. Функция должна вернуть массив
+// всех значений свойства с таким именем из каждого объекта в массиве products.
+// Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
+var products = [{
+  name: 'Радар',
+  price: 1300,
+  quantity: 4
+}, {
+  name: 'Сканер',
+  price: 2700,
+  quantity: 3
+}, {
+  name: 'Дроид',
+  price: 400,
+  quantity: 7
+}, {
+  name: 'Захват',
+  price: 1200,
+  quantity: 9
+}]; // console.table(products);
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function getAllPropValues(propName) {
+  //
+  var arr = [];
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+  for (var _i = 0, _products = products; _i < _products.length; _i++) {
+    var obj = _products[_i];
 
-/* THEORY
-function isEven(num) {
-  return num % 2 === 0;
-}
-console.log(isEven(10)); // true
-*/
-// task 29
-// function getEvenNumbers(start, end) {
-//   const arr = [];
-//   for (let i = start; i <= end; i += 1) {
-//     if (i % 2 === 0) {
-//       arr.push(i);
-//     }
-//   }
-//   return arr;
-// }
-// console.log(getEvenNumbers(2, 5)); //[2, 4]
-// console.log(getEvenNumbers(3, 12)); //4, 6, 8, 10
-// task 30 --- brak in neccesary iteration
-// const start = 6;
-// const end = 27;
-// let number;
-// for (let i = start; i < end; i += 1) {
-//   if (i % 5 === 0) {
-//     number = i;
-//     break;
-//   }
-// }
-// task 31 --- without braek, to braek use return
-// function findNumber(start, end, divisor) {
-//   let number;
-//   for (let i = start; i < end; i += 1) {
-//     if (i % divisor === 0) {
-//       number = i;
-//       return number;
-//     }
-//   }
-// }
-// console.log(findNumber(16, 35, 7)); //21
-// task 32
-// Напиши функцию includes(array, value), которая делает тоже
-// самое, что и метод массива массив.includes(значение) -
-// проверяет, есть ли в массиве array значение value,
-// возвращая true если есть и false в противном случае.
-// При выполнении этой задачи в теле функции includes()
-// нельзя использовать метод массив.includes(значение).
-function includes(array, value) {
-  var _iterator = _createForOfIteratorHelper(array),
-      _step;
+    //
+    switch (obj[propName]) {
+      case obj.name:
+        arr.push(obj.name);
+        break;
 
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var item = _step.value;
+      case obj.price:
+        arr.push(obj.price);
+        break;
 
-      if (item === value) {
-        return item === value;
-      }
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
+      case obj.quantity:
+        arr.push(obj.quantity);
+        break;
+    } //
+
   }
 
-  return false;
+  return arr;
 }
 
-console.log(includes([1, 2, 3, 4, 5], 3)); //true
+console.log(getAllPropValues('name')); // [1300,2700,400,1200]
 
-console.log(includes([1, 2, 3, 4, 5], 17)); //false
-
-console.log(includes(['Земля', 'Марс', 'Венера', 'Юпитер', 'Сатурн'], 'Юпитер')); //true
+console.log(getAllPropValues('category')); // []
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -224,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53757" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63156" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -400,5 +375,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/additional/mod-2/mod-2-28-percentage.js"], null)
-//# sourceMappingURL=/mod-2-28-percentage.14d686d5.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/additional/mod-3/mod-3-19.js"], null)
+//# sourceMappingURL=/mod-3-19.8346e37d.js.map
