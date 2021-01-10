@@ -9,17 +9,27 @@ const products = [
   { name: 'Дроид', price: 400, quantity: 7 },
   { name: 'Захват', price: 1200, quantity: 9 },
 ];
+// console.table(products);
 
 function getAllPropValues(propName) {
+  //
+  const arr = [];
   for (let obj of products) {
-    // console.log(Object.keys(products)); // [0, 1, 2, 3,]
-    let arrResult = [];
-    console.log(obj.name);
-    if (obj.name === propName) {
-      arrResult.push(obj.name);
-      return arrResult;
+    //
+    switch (obj[propName]) {
+      case obj.name:
+        arr.push(obj.name);
+        break;
+      case obj.price:
+        arr.push(obj.price);
+        break;
+      case obj.quantity:
+        arr.push(obj.quantity);
+        break;
     }
+    //
   }
+  return arr;
 }
-console.log(getAllPropValues('price')); // [1300,2700,400,1200]
-// console.log(getAllPropValues('category')); // []
+console.log(getAllPropValues('name')); // [1300,2700,400,1200]
+console.log(getAllPropValues('category')); // []

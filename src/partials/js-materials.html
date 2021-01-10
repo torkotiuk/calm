@@ -1,35 +1,199 @@
 <section class="section">
   <div class="container">
     <h2>JS materials</h2>
-    <p><a href="https://www.w3schools.com/js/js_reserved.asp">JavaScript Reserved Words</a > - don't do variable by this words</p>
+    <p>
+      <a href="https://www.w3schools.com/js/js_reserved.asp"
+        >JavaScript Reserved Words</a
+      >
+      - don't do variables by this words
+    </p>
     <a href="http://fecore.net.ua/books/m5ph3r-javascript/">GoIT JS Book</a>
     <h3>Операторы сравнения</h3>
     <ul>
-    	<li>a > b и a < b - больше/меньше</li>
-    	<li>a >= b и a <= b - больше/меньше или равно</li>
-    	<li>a == b - равенство</li>
-    	<li>a != b - неравенство</li>
-    	<li>a === b - строгое равенство</li>
-    	<li>a !== b - строгое неравенство</li>
+      <li>a > b и a < b - больше/меньше</li>
+      <li>a >= b и a <= b - больше/меньше или равно</li>
+      <li>a == b - равенство</li>
+      <li>a != b - неравенство</li>
+      <li>a === b - строгое равенство</li>
+      <li>a !== b - строгое неравенство</li>
     </ul>
     <h3>1.1. Приведение типов</h3>
-    <p>	
-Запомните 6 ложных (falsy) значений, приводящихся к false в логическом преобразовании: </p>
+    <p>
+      Запомните 6 ложных (falsy) значений, приводящихся к false в логическом
+      преобразовании:
+    </p>
     <ul>
-    	<li>0</li>
-    	<li>NaN</li>
-    	<li>null</li>
-    	<li>undefined</li>
-    	<li>emty string: ''</li>
-    	<li>false</li>
+      <li>0</li>
+      <li>NaN</li>
+      <li>null</li>
+      <li>undefined</li>
+      <li>emty string: ''</li>
+      <li>false</li>
     </ul>
+
+    <h3>2. Array</h3>
+    <h4>2. 1. To clear array</h4>
+    <p>
+      To clear array use <strong>this.array = [];</strong> - means assign new
+      emty array link
+    </p>
+    <h4>2. 2. To concat arrays</h4>
+    <ul>
+      <li>
+        <p>
+          To concut arrays we may use <strong>old syntax</strong>: <br />
+          const firstArray = [10, 20, 30]; <br />
+          const twoArrays = firstArray.concat([1, 2, 3]); //[10, 20, 30, 1, 2,
+          3]
+        </p>
+      </li>
+      <li>
+        <strong>new syntax</strong> with <strong>...</strong> operation is const
+        twoArrays = [...firstArray, 1, 2, 3];
+      </li>
+    </ul>
+    <h4>2. 3. To create new array from couple another</h4>
+    <ul>
+      <li>
+        <strong>Old syntax</strong> const newArr = Object.assign({}, {x: 1, y:
+        2}, {x: 5; z: 8}); //{x: 5, y: 2; z: 8}
+      </li>
+      <li>
+        <strong>New syntax: >>>>> </strong>const newArr = { ...{x: 1, y: 2},
+        ...{x: 5; z: 8}}; //{x: 5, y: 2; z: 8}
+        <p>
+          Also in new syntax we can add new elements, f.e. w: 100, z: 500
+          somewhere const newArr = { ...{x: 1, y: 2}, w: 100, ...{x: 5, z: 8},
+          z: 500}; //{x: 5, y: 2; w: 100; z: 500, }
+        </p>
+      </li>
+    </ul>
+
+    <h3>3. Object</h3>
+    <!--  -->
+    <h4>3. 1. Methods inside objects</h4>
+    <ul>
+      <li>
+        <strong>Old syntax</strong> in ES 5 --- fullName : function() {}, detail
+        on
+        <a href="https://www.w3schools.com/js/js_object_methods.asp"
+          >w3schools</a
+        >
+      </li>
+      <li><strong>New syntax</strong> from ES 6 --- fullName() {}</li>
+    </ul>
+    <!--  -->
+    <h4>3. 2. Rest & Spread</h4>
+    <p>
+      <strong>RULE</strong><br />
+      Для функций - в параметрах Rest, в аргументах Spread. <br />
+      Для остального слева от знака = Rest, справа от знака = Spread.
+    </p>
+    <h4>3. 3. Deep desctructuring</h4>
+    <p>
+      const user = { name: 'Jacques Gluke', tag: 'jgluke', stats: { followers:
+      5603, views: 4827, likes: 1308, }, };
+    </p>
+    <ul>
+      <li>
+        usual: <br />
+        const { name, tag, stats: { followers, views: userViews, likes:
+        userLikes = 0 }, } = user;
+      </li>
+      <li>
+        another way: <br />const { name, tag } = user; <br />
+        const { followers, views: userViews, likes: userLikes = 0 } = stats;
+      </li>
+    </ul>
+
+    <h3>5. Hof, callback, closure, 'this'</h3>
+    <h4>5. 1. HOF & callback functions</h4>
+    <p>
+      HOF function - it't a fn that can get another fn as a parametr or can
+      return some function <br />Callback fn -
+    </p>
+
+    <h4>5. 2. Closure</h4>
+    <p>
+      <strong>Closure</strong> means that an inner function always has access to
+      the vars and parameters of its outer function, even after the outer
+      function has returned.
+    </p>
+    <p>
+      In other words - A closure is the combination of a function bundled
+      together (enclosed) with references to its surrounding state (the lexical
+      environment).
+    </p>
+
+    <h4>5. 3. This</h4>
+    <p>
+      The JavaScript <strong>this</strong> keyword refers to the object it
+      belongs to.
+    </p>
+    <p>
+      In other words, every javascript function while executing has a reference
+      to its current execution context, called this. Execution context means
+      here is how the function is called.
+    </p>
+    <p>
+      To understand this keyword, only we need to know how, when and from where
+      the function is called, does not matter how and where function is declared
+      or defined.
+    </p>
+    <a
+      href="https://codeburst.io/all-about-this-and-new-keywords-in-javascript-38039f71780c"
+      >Details about <strong>'this'</strong></a
+    >
+    <p>
+      By DEFAULT our without context. If we 'use strict' mode, our 'this' return
+      'undefined', but without strict mode our 'this' return 'window' (it's a
+      tab in browser)
+    </p>
+
+    <h4>5. 4. Call, apply, bind - function methods</h4>
+    <a
+      href="https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb"
+      >Details</a
+    >
 
     <h3>Learn codding pages</h3>
     <ul>
-    	<li><a href="https://www.freecodecamp.org/learn/">https://www.freecodecamp.org/learn/</a></li>
+      <li>
+        <a href="https://www.freecodecamp.org/learn/"
+          >https://www.freecodecamp.org/learn/</a
+        >
+      </li>
     </ul>
 
-    <p>INTERESTING: 'While' loop is faster than 'for', 'while' is in lower level</p>
-    
+    <p>
+      INTERESTING: 'While' loop is faster than 'for', 'while' is in lower level
+    </p>
+
+    <!-- next section is private, NOT to deploy-->
+    <h3>Additional tasks from GOIT (from tg bot)</h3>
+    <p>
+      <a
+        href="https://homework-js-autocheck.goit.ua/?token=0d58b374a569d1368c6c838264db5f151edfeaec1245503ded3a0d2e8c3bb0f6&block=cdefghi42"
+        >Modul 1</a
+      >
+    </p>
+    <p>
+      <a
+        href="https://homework-js-autocheck.goit.ua/?token=0d58b374a569d1368c6c838264db5f151edfeaec1245503ded3a0d2e8c3bb0f6&block=2345qrs60"
+        >Modul 2</a
+      >
+    </p>
+    <p>
+      <a
+        href="https://homework-js-autocheck.goit.ua/?token=5459ba53cfe28586719973206169511ab339cc595ae893c05d64dd1b11690b70&block=vwxyz0169"
+        >Modul 3</a
+      >
+    </p>
+    <p>
+      <a
+        href="https://homework-js-autocheck.goit.ua/?token=0d58b374a569d1368c6c838264db5f151edfeaec1245503ded3a0d2e8c3bb0f6&block=uvwxyz0104"
+        >Modul 4</a
+      >
+    </p>
   </div>
-</section> 
+</section>
