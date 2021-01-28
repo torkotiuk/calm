@@ -1,0 +1,35 @@
+body {
+  padding: 20px;
+}
+
+.task__title {
+  color: blue;
+}
+/* task-3 */
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.gallery__image {
+  width: 500px;
+  border: 5px solid orange;
+  margin-bottom: 20px;
+}
+
+/* task 6 */
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
